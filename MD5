@@ -1,7 +1,7 @@
-9ac3d32004a578db47947358aa899e4d *DESCRIPTION
+01713d8dd3a9288199e934288308d86b *DESCRIPTION
 2bae62c2c3b0103dfbb41d814db72bb0 *NAMESPACE
-6914e6d22f65cbf8b8637504631736f1 *R/LSDinterface.R
-9931c1040760c609923dd4047aed7ac9 *build/partial.rdb
+7765e18df3cbecab50ba37f5aa6d99ce *R/LSDinterface.R
+bb4332f8b90d7bed8a720d328ab5930d *build/partial.rdb
 80d12e5d20a6af21c03fb32e5582c43c *inst/extdata/Sim1.lsd
 8f1b3e00af11ebae9946c6f727c7344c *inst/extdata/Sim1_1.res
 26855b7fd82c3f7aba7546c589cf54ef *inst/extdata/Sim1_1.res.gz
@@ -25,5 +25,5 @@ ff561b721ba290171efccd730d5b6e36 *man/read.list.lsd.Rd
 332a48496018e79988a3bac42986deee *man/read.multi.lsd.Rd
 6cbeba31889eb165015d8583e73d7681 *man/read.raw.lsd.Rd
 cccc3626496d3e6d730f86229715fe55 *man/read.single.lsd.Rd
-27b2b5c267391192f69f8224a6376a3a *man/select.colattrs.lsd.Rd
+dace0cc042810c2d97bc8b2cc7606267 *man/select.colattrs.lsd.Rd
 3130eeb2033eef4f471c3f1c405b85ed *man/select.colnames.lsd.Rd
