@@ -1,7 +1,7 @@
-2b30bce6201040ac574fd169eb16313d *DESCRIPTION
+0373fc0bea93435294146f21cb21f4fd *DESCRIPTION
 a24d3c062fe96518f2a421cb51da9bc3 *NAMESPACE
-abf500a4e09a37a4c4e4975d970bdbfc *R/LSDinterface.R
-6ff7a99019f8105adb45347435326022 *build/partial.rdb
+3780f92dbf980dd9bd4dc17d91c6725c *R/LSDinterface.R
+59d8517f17e9a211b0060f25f84196ce *build/partial.rdb
 80d12e5d20a6af21c03fb32e5582c43c *inst/extdata/Sim1.lsd
 8f1b3e00af11ebae9946c6f727c7344c *inst/extdata/Sim1_1.res
 26855b7fd82c3f7aba7546c589cf54ef *inst/extdata/Sim1_1.res.gz
