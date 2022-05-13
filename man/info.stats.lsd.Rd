@@ -10,7 +10,7 @@ This function reads a 3 or 4-dimensional array produced by \code{\link{read.3d.l
 info.stats.lsd( array, rows = 1, cols = 2, median = FALSE,
                 ci = c( "none", "mean", "median", "auto" ),
                 ci.conf = 0.95, ci.boot = NULL, boot.R = 999,
-                na.rm = TRUE, inf.rm = TRUE )
+                seed = 1, na.rm = TRUE, inf.rm = TRUE )
 }
 \arguments{
   \item{array}{
@@ -23,7 +23,7 @@ an integer array dimension to be used as the rows for the statistics matrices, d
 an integer array dimension to be used as the columns for the statistics matrices, default is to use second array dimension.
 }
   \item{median}{
-a logical value indicating if (\code{TRUE}) the median should also be computed. The default (\code{FALSE}) is not to compute the median.
+a logical value indicating if (\code{TRUE}) the median and the median absolute deviation should also be computed. The default (\code{FALSE}) is not to compute these statistics.
 }
   \item{ci}{
 a character string specifying the type of confidence interval to compute, must be one of \code{"none"} (default) for no confidence interval computation, \code{"mean"}, to compute a confidence interval for the mean, \code{"median"}, for the median, or \code{"auto"}, to use the option set for the \code{median} argument (above). This option can be abbreviated.
@@ -32,10 +32,13 @@ a character string specifying the type of confidence interval to compute, must b
 confidence level of the confidence interval.
 }
   \item{ci.boot}{
-a character string specifying the type of bootstrap confidence interval to compute, must be one of \code{"basic"}, \code{"perc"} (percentile interval), or \code{"bca"} (BCa - adjusted percentile interval). If set to \code{NULL} a regular asymptotic confidence interval is produced (no bootstrap), assuming normal distribution for the mean or using a non-parametric rank test for the median. Non-bootstrap percentiles are much faster to compute but generally less accurate.
+a character string specifying the type of bootstrap confidence interval to compute, must be one of \code{"basic"}, \code{"perc"} (percentile interval), or \code{"bca"} (BCa - adjusted percentile interval). If set to \code{NULL} or an empty string, a regular asymptotic confidence interval is produced (no bootstrap), assuming normal distribution for the mean or using a non-parametric rank test for the median. Non-bootstrap percentiles are much faster to compute but generally less accurate.
 }
   \item{boot.R}{
 number of bootstrap replicates.
+}
+  \item{seed}{
+a single value, interpreted as an integer to define the pseudo-random number generator state used for the bootstrap process, or \code{NULL}, to re-initialize the generator as if no seed had yet been set (a new state is created from the current time and the process ID).
 }
   \item{na.rm }{
 a logical value indicating whether \code{NA} values should be stripped before the computation proceeds.
@@ -51,6 +54,7 @@ Returns a list containing four to seven matrices, with the original size and nam
 \item{max}{a matrix with the maximum value of the MC experiments}
 \item{min}{a matrix with the minimum value of the MC experiments}
 \item{med}{a matrix with the median of the MC experiments (only present if argument \code{median = TRUE})}
+\item{mad}{a matrix with the median absolute deviation of the MC experiments (only present if argument \code{median = TRUE})}
 \item{ci.hi}{a matrix with the maximum value of the MC experiments (only present if argument \code{ci} is not set to  \code{"none"})}
 \item{ci.lo}{a matrix with the minimum value of the MC experiments (only present if argument \code{ci} is not set to \code{"none"})}
 \item{n}{a matrix with the number of observations available for computation of statistics}
